@@ -12,7 +12,7 @@ public:
 	Person(std::string name, int age);
 
 	~Person(void);
-	void setName(std::string name);
+	virtual void setName(std::string name);
 
 	void setAge(int age);
 
@@ -38,7 +38,7 @@ public:
 	Student(std::string name, int age, std::string subject, int rank);
 
 	~Student();
-	Student& operator=(Student& S);
+
 	void setRank(int rank);
 
 	int getRank();
@@ -48,6 +48,8 @@ public:
 	std::string getSubject();
 
 	void checkRank();
+
+	Student& operator=(Student& S);
 
 	friend std::istream& operator>>(std::istream& in, Student& H);
 
